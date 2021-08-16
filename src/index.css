@@ -11,11 +11,11 @@ body{
   color: var(--secondary);
 }
 .App{
-  max-width: 1050px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 .title h1{
-  color: var(--primary);
+  color: red;
   font-size: 2rem;
   letter-spacing: 2px;
   font-weight:normal;
