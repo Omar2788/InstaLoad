@@ -12,7 +12,7 @@ const handleClick = (e) => {
 return (
     <motion.div className="backdrop" onClick={handleClick}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1}}
+      animate={{ opacity: 1 }}
     >
       <motion.img src={selectedImg} alt="enlarged pic" 
         initial={{ y: "-100vh" }}
