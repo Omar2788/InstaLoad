@@ -26,7 +26,7 @@ const Signin = () => {
             passwordRef.current.value
         ).then(user => {
             alert('Welcome InstaLoad ') ;
-            window.location.replace('http://localhost:3000/')
+            window.location.replace('http://localhost:3000/Home')
 
         }).catch(err => {
             alert('User doesn t exists choose another user') ;
