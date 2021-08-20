@@ -1,0 +1,12 @@
+.but{
+    margin-left: 90%;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #fcb9b4;
+    background-color: azure;
+    color: #eb9690;
+}
+.but:hover {
+    background-color: #fcb9b4;
+    color: white;
+}

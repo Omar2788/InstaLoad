@@ -15,8 +15,9 @@ const Signin = () => {
             alert('user added') ;
 
         }).catch(err => {
-            alert('Email exists choose another user') ;
-            
+            if  ((passwordRef.current.value.length)<6 ){
+                alert('Password should be more than six caractere') ;
+            }else alert('User incorrect, Choose another user') ;
         })
     }
     const signIn = e => {
