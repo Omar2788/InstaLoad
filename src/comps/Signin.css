@@ -4,6 +4,9 @@
     margin-right: auto;
     
 }
+.sign{
+    color: #efb6b2;
+}
 
 .signin>form{
     display: grid;

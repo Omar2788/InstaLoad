@@ -1,27 +1,19 @@
-import React, { useState} from 'react';
-import ImageGrid from './comps/ImageGrid';
-import Modal from './comps/Modal';
-import Titlee from './comps/Titlee';
-import UploadForm from './comps/UploadForm';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' ; 
 import Signin from './comps/Signin';
 import Title from './comps/Title';
-
-function App() {
-  const [selectedImg, setSelectedImg] = useState(null); 
-
-
+import Home from "./pages/Home"
+function App() { 
 
   return (
-    <Router>
+    
      
     <div className="App">
+      
+    <Router>
     <Switch>
       <Route exact path="/">
-      <Titlee/>
-      <UploadForm/>
-      <ImageGrid setSelectedImg={setSelectedImg}/>
-      { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/> }
+        <Home/>
       </Route>
 
       <Route path="/login">
@@ -29,10 +21,11 @@ function App() {
         <Signin/>
       </Route>
     </Switch>
+    </Router> 
     </div>
 
    
-    </Router> 
+    
   );
 }
 
