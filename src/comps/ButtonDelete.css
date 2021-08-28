@@ -1,0 +1,13 @@
+.butDelete{
+    margin-left: 80rem;
+    background-color: #f78078;
+    color: black;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #da271a;
+}
+.butDelete:hover {
+    background-color:red ;
+    color: white;
+
+}

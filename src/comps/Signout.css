@@ -3,10 +3,12 @@
     cursor: pointer;
     border-radius: 12px;
     border: 2px solid #fcb9b4;
-    background-color: azure;
+    background-color: rgb(232, 247, 247);
     color: #eb9690;
+    text-decoration-line: none;
 }
 .but:hover {
     background-color: #fcb9b4;
     color: white;
+
 }
