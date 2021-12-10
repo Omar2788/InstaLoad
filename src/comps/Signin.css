@@ -1,4 +1,5 @@
 .signin{
+    padding: 60px;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -6,7 +7,7 @@
     
 }
 .sign{
-    color: #efb6b2;
+    color: #257c4c;
 }
 
 .signin>form{
@@ -37,4 +38,34 @@
     cursor: pointer;
     color: red;
     
+}
+.email{
+    width: 230px;
+    border-color: rgb(106, 155, 106);
+    margin-left: 30px;
+    border-radius: 8px;
+}
+.motdepasse{
+    width: 230px;
+    margin-left: 30px;
+    border-radius: 8px;
+    margin-top: 8px;
+    border-color: rgb(106, 155, 106);
+
+}
+.buttonSignIn{
+    margin-top: 8px;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 75px;
+    border-color: rgb(49, 107, 49);
+
+}
+.backgroundSignIn{
+    border-radius: 10px;
+    background-color:#76a088;
+}
+.title{
+    color: green;
+    text-decoration: green;
 }

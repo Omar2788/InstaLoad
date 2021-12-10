@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react' ; 
 import useStorage from '../hooks/useStorage'; 
 import { motion } from 'framer-motion' ; 
+import './progressBar.css' 
 
-
-const ProgressBar = ( {file, setFile }) => {
-    const { url, progress } = useStorage(file) ;
+const ProgressBar = ( {file, setFile,userName }) => {
+    const { url, progress } = useStorage({file,userName}) ;
     useEffect(() => {
         if (url){
             setFile(null) ;

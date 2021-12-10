@@ -1,5 +1,5 @@
  import firebase from 'firebase';
- 
+ import"firebase/auth"; 
  // Your web app's Firebase configuration
  var firebaseConfig = {
   apiKey: "AIzaSyAGOalrvkEHfuo2omw1ZqV3Zg3oUDRWfLk",
@@ -18,4 +18,4 @@ firebase.initializeApp(firebaseConfig);
 
   const auth = firebase.auth();
   
-export {auth, projectStorage , projectFirestore, timestamp } ;
+export {auth, projectStorage , projectFirestore, firebaseConfig, timestamp } ;

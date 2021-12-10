@@ -1,7 +1,7 @@
 import React from 'react';
-//import './Title.css'
+import './Title.css';
+import './Signin.css';
 // import DeleteIcon from '@material-ui/icons/Delete';
-
 const Title = () => {
   return (
     <div className="title">

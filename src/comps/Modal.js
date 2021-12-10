@@ -1,11 +1,23 @@
 import React from 'react' ;
 import { motion } from 'framer-motion';
 import './ButtonDelete.css' ;
-import { projectStorage} from "../firebase/config";
-import useStorage from '../hooks/useStorage';
-import { useState, useEffect } from "react";
-import { doc, deleteDoc } from "firebase/firestore";
+
+import { projectFirestore } from "../firebase/config";
+
+
 const  Modal = ({ selectedImg,setSelectedImg }) => {
+
+  const deleteImage=()=>{
+  var image_query = projectFirestore.collection('images').where('url','==',selectedImg);
+  image_query.get().then((snap)=>{
+      snap.forEach((doc)=>{
+          doc.ref.delete();
+      })
+  })
+
+  setSelectedImg(null) ;
+}
+
 const handleClick = (e) => {
   
     if (e.target.classList.contains('backdrop')){
@@ -14,34 +26,6 @@ const handleClick = (e) => {
     }
     
 }
-
-/*
-const deleteImage = (selectedImg) => {
-  var fileUrl = selectedImg.url ; 
-  var fileRef = storage.refFromURL(fileUrl);
-  
-console.log("File in database before delete exists : " 
-        + fileRef.exists())
-  
-fileRef.delete().then(function () {
-  
-    // File deleted successfully
-    console.log("File Deleted")
-}).catch(function (error) {
-    
-});
-  
-console.log("File in database after delete exists : "
-        + fileRef.exists())
-
-
-  //this.props.deleteImage(this.props.selectedImg);
- // console.log(doc.url) ; 
- // storageRef.delete();
- // selectedImg.url.remove() ; 
-   /* useStorage.delete().then(()=>{
-    selectedImg.remove() ; 
-  });*/
 
 return (
   
@@ -53,7 +37,7 @@ return (
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
       />        
-      <button class='butDelete' >delete</button> 
+      <button className='butDelete' onClick={deleteImage}>delete</button> 
 
     </motion.div>
   )

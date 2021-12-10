@@ -2,13 +2,14 @@
     margin-left: 90%;
     cursor: pointer;
     border-radius: 12px;
-    border: 2px solid #fcb9b4;
-    background-color: rgb(232, 247, 247);
-    color: #eb9690;
+    border: 2px solid green;
+    background-color: rgb(165, 194, 171);
+    color: green;
     text-decoration-line: none;
 }
 .but:hover {
-    background-color: #fcb9b4;
-    color: white;
+    background: rgb(153, 185, 153);
+    color: green;
 
 }
+

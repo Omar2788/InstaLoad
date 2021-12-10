@@ -1,15 +1,16 @@
 import React from 'react';
-// import DeleteIcon from '@material-ui/icons/Delete';
 import './Signout.css'
-import { Link  } from 'react-router-dom';
+//import { Link  } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { firebaseConfig } from '../firebase/config'; ;
 
 const Signout = () => {
   return (
     <div className="signout">
-      <button  class="but" onClick={() =>  Swal.fire({
+      <button  class="but" onClick={() => firebaseConfig.auth().signOut(),  
+      Swal.fire({
             title: 'Are you sure !',
-            text: 'Do you want exist !',
+            text: 'Do you want exit !',
             icon: 'question',
             confirmButtonText: 'Yes'
           }     

@@ -1,7 +1,7 @@
 import React from 'react';
 // import DeleteIcon from '@material-ui/icons/Delete';
 import Signout from "../comps/Signout"
-
+import './Signout.css'
 
 const Titlee = () => {
   return (

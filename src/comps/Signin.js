@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { auth } from '../firebase/config';
 import './Signin.css'
 import Swal from 'sweetalert2';
+
 const Signin = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -11,7 +12,10 @@ const Signin = () => {
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then(user => {
+            //history.push("/")
+        ).then(cred => {
+            console.log(cred);
+        }).then(user => {
            // alert('user added') ;
             Swal.fire(
                 'User added',
@@ -20,7 +24,7 @@ const Signin = () => {
               )
 
         }).catch(err => {
-            if  ((passwordRef.current.value.length)<6 ){
+            if  ((passwordRef.current.value.length)<8 ){
                // alert('Password should be more than six caractere') ;
                Swal.fire(
                 'Password incorrect',
@@ -45,9 +49,10 @@ const Signin = () => {
             'Welcome InstaLoad',
             'You clicked the button!',
             'success'
+            
           ).then((result) => {
               if (result.value){ 
-                 
+                    
                 window.location.replace('http://localhost:3000/Home') ;
               }
           })
@@ -65,12 +70,12 @@ const Signin = () => {
     }
     return (
         <div className="signin">
-            <form action="">
+            <form className="backgroundSignIn" action="">
                 <h1 class="sign">Sign in</h1>
-                <input ref={emailRef} type="email" placeholder="User"/>
-                <input ref={passwordRef} type="password" placeholder="Password"/>
+                <input className="email" ref={emailRef} type="email" placeholder="User"/>
+                <input className="motdepasse" ref={passwordRef} type="password" placeholder="Password"/>
                 
-                <button onClick={signIn}>Sign in </button> 
+                <button className="buttonSignIn" onClick={signIn}>Sign in </button> 
                 <h6>Not yet register? <span onClick={signUp} className="signin__link">Sign up</span></h6>
             </form>
         </div>
