@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom' ; 
+import { BrowserRouter as Router,  Route, Switch } from 'react-router-dom' ; 
 import Signin from './comps/Signin';
 import Title from './comps/Title';
 import Home from "./pages/Home"
@@ -20,7 +20,7 @@ function App() {
           </Route>
 
           <PrivateRoute exact path="/">
-            <Title/>
+            
             <Signin/>
           </PrivateRoute>
         </Switch>

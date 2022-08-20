@@ -62,7 +62,7 @@ const Signin = () => {
         }).catch(err => {
             //alert('User doesn t exists choose another user') ;
             Swal.fire(
-                "User doesn't exists !",
+                "User doesn't exist !",
                 'choose another user ',
                 'error'
             )
@@ -70,14 +70,33 @@ const Signin = () => {
     }
     return (
         <div className="signin">
-            <form className="backgroundSignIn" action="">
-                <h1 class="sign">Sign in</h1>
-                <input className="email" ref={emailRef} type="email" placeholder="User"/>
-                <input className="motdepasse" ref={passwordRef} type="password" placeholder="Password"/>
+            <div className='l'>
+            <div className="leftside">
+                <h2 className='l-intro'>Welcome to</h2>
+                <h1 className='l-name'>InstaLoad</h1>
                 
-                <button className="buttonSignIn" onClick={signIn}>Sign in </button> 
-                <h6>Not yet register? <span onClick={signUp} className="signin__link">Sign up</span></h6>
-            </form>
+                <p className="i-desc">
+                    I'am a Software Engineer graduated from North American Private University on 2024.
+                    I've completed my engineer the second of the generation at my university and
+                    my bachelor degree the second one.
+                    I'am motivated and passionate with new technology and innovation.  
+                </p>
+            </div>
+            </div>
+            <div className='r'>
+                <div className='bs'>
+                    <form className="bSignIn" action="">
+                        <h1 class="sign">Sign in</h1>
+                        <img className='imageUser' src='https://nulm.gov.in/images/user.png' alt=''></img>
+                    
+                        <input className="login" ref={emailRef} type="email" placeholder="Login"/>
+                        <input className="motdepasse" ref={passwordRef} type="password" placeholder="Password"/>
+                        <button className="buttonSignIn" onClick={signIn}>Sign in </button>
+                        <h6 className='remarque'>Not yet register? <span onClick={signUp} className="signin__link">Sign up</span></h6>
+                    </form>
+                </div>
+            </div>
+            
         </div>
     )
 }

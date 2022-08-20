@@ -4,14 +4,7 @@
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
-
-/* base styles & title */
-body{
-  font-family: "Noto Serif";
-  color: var(--secondary);
-}
 .App{
-  max-width: 1040px;
   margin: 0 auto;
 }
 .title h1{

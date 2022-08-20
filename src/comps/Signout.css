@@ -3,7 +3,7 @@
     cursor: pointer;
     border-radius: 12px;
     border: 2px solid green;
-    background-color: rgb(165, 194, 171);
+    background-color: rgb(227, 231, 228);
     color: green;
     text-decoration-line: none;
 }
@@ -12,4 +12,7 @@
     color: green;
 
 }
-
+.logoPageHome{
+    width: 150px;
+    height: 100px;
+}

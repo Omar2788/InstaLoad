@@ -4,7 +4,6 @@ import Titlee from "../comps/Titlee"
 import UploadForm from "../comps/UploadForm"
 import Modal from "../comps/Modal"
 import { Redirect } from "react-router"
-import firebase from "firebase"
 function Home(userName){
     const [selectedImg, setSelectedImg] = useState(null);
     var user=1;/*auth.currentUser;*/

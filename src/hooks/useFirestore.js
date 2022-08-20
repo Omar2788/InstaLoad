@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { projectFirestore } from "../firebase/config";
-import Signin from '../comps/Signin';
 
 const useFirestore = (collection) => {
     const [docs, setDocs] = useState([]);
