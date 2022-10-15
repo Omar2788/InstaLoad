@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { auth } from '../firebase/config';
 import './Signin.css'
 import Swal from 'sweetalert2';
-
+import usr from "../images/user.png";
 const Signin = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -74,12 +74,9 @@ const Signin = () => {
             <div className="leftside">
                 <h2 className='l-intro'>Welcome to</h2>
                 <h1 className='l-name'>InstaLoad</h1>
-                
                 <p className="i-desc">
-                    I'am a Software Engineer graduated from North American Private University on 2024.
-                    I've completed my engineer the second of the generation at my university and
-                    my bachelor degree the second one.
-                    I'am motivated and passionate with new technology and innovation.  
+                    You have a lot of photos ? You didn't have a place to keep your memories safe ?
+                    You have a difficulty to manage your photos ? InstaLoad help you to save & keep your memories protected. 
                 </p>
             </div>
             </div>
@@ -87,8 +84,7 @@ const Signin = () => {
                 <div className='bs'>
                     <form className="bSignIn" action="">
                         <h1 class="sign">Sign in</h1>
-                        <img className='imageUser' src='https://nulm.gov.in/images/user.png' alt=''></img>
-                    
+                        <img className='imageUser' src={usr} alt=''></img>
                         <input className="login" ref={emailRef} type="email" placeholder="Login"/>
                         <input className="motdepasse" ref={passwordRef} type="password" placeholder="Password"/>
                         <button className="buttonSignIn" onClick={signIn}>Sign in </button>
