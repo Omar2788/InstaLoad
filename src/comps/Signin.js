@@ -3,9 +3,11 @@ import { auth } from '../firebase/config';
 import './Signin.css'
 import Swal from 'sweetalert2';
 import usr from "../images/user.png";
+import { useHistory } from "react-router-dom";
 const Signin = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const history = useHistory()
 
     const signUp = e => {
         e.preventDefault();
@@ -53,7 +55,7 @@ const Signin = () => {
           ).then((result) => {
               if (result.value){ 
                     
-                window.location.replace('http://localhost:3000/Home') ;
+                history.push("/Home")
               }
           })
            // window.location.replace('http://localhost:3000/Home') ;
